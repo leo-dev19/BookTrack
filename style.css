@@ -1,0 +1,114 @@
+:root{ --bg:#faf7f4; --card:#fff; --accent:#2b5278; --muted:#7b7b7b; font-family: 'Inter', sans-serif; }
+*{ box-sizing:border-box; }
+body{ margin:0; background:var(--bg); color:#111; }
+.site-header{ padding:20px 32px; }
+.container{ display:flex; gap:24px; padding:20px 32px; }
+.panel{ background:var(--card); padding:18px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.05); flex:1; }
+.form-panel{ max-width:420px; }
+.list-panel{ flex:2; }
+input, select, button{ display:block; width:100%; padding:10px; margin:8px 0 12px; border-radius:8px; border:1px solid #e6e6e6; }
+button{ background:var(--accent); color:white; border:none; cursor:pointer; }
+#book-list .book-card{ display:flex; gap:30px; padding: 20px; border-radius:10px; margin-bottom:10px; align-items:center; border:1px solid #f0f0f0; }
+.book-card img{ width:64px; height:92px; object-fit:cover; border-radius:6px; }
+.site-footer{ background-color: gray; font-size: 15px; text-align: center; }
+
+
+/* Modal fondo */
+.modal {
+  display: none; /* oculto por defecto */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Caja del modal */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.modal-buttons .danger {
+  background: #e74c3c;
+  color: white;
+}
+
+.modal-buttons button:hover {
+  opacity: 0.9;
+}
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}

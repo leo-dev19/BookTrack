@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookTrack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>BookTrack</h1>
+    <header class="site-header">
+        <h1> 📚 BookTrack</h1>
     </header>
 
-    <main>
-        <section>
+    <main class="container">
+        <section class="panel form-panel">
             <h2>Agregar un libro</h2>
-            <form>
+            <form id="book-form">
                 <label for="titulo">Titulo</label>
                 <input id="titulo" name="titulo" type="text" required>
 
-                <label for="autor"></label>
+                <label for="autor">Autor</label>
                 <input id="autor" name="autor" type="text" required>
 
                 <label for="genero">Genero</label>
@@ -43,21 +45,33 @@
             </form>
         </section>
 
-        <section>
-            <h2>mis libros</h2>
-            <div>
-
+        <section class="panel list-panel">
+            <h2>Mis libros</h2>
+            <div id="book-list">
+                
             </div>
-
+           
 
 
         </section>
     </main>
 
 
+<div id="modal-confirm" class="modal">
+  <div class="modal-content">
+    <h3>¿Eliminar libro?</h3>
+    <p id="modal-message"></p>
+    <div class="modal-buttons">
+      <button id="cancel-btn">Cancelar</button>
+      <button id="confirm-btn" class="danger">Eliminar</button>
+    </div>
+  </div>
+</div>
 
-    <footer>
-        <small>Hecho por Leonardo Chavez</small>
+
+
+    <footer class="site-footer">
+        <h1>Hecho por leonardo - AGOSTO 2025 😎</h1>
     </footer>
 
     <script src="script.js"></script>
