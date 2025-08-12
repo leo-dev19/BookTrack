@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookTrack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>BookTrack</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Agregar un libro</h2>
+            <form>
+                <label for="titulo">Titulo</label>
+                <input id="titulo" name="titulo" type="text" required>
+
+                <label for="autor"></label>
+                <input id="autor" name="autor" type="text" required>
+
+                <label for="genero">Genero</label>
+                <select name="genero" id="genero">
+                    <option>Fantasia</option>
+                    <option>Comedia</option>
+                    <option>Romance</option>
+                    <option>Historia</option>
+                </select>
+
+                <label for="portada">Portada</label>
+                <input id="portada" name="portada" type="url" placeholder="https://...">
+
+                <label>Estado</label>
+                <select name="estado" id="estado">
+                    <option value="pendiente">pendiente</option>
+                    <option value="leido">leido</option>
+                </select>
+
+                <button type="submit">Agregar</button>
+
+            </form>
+        </section>
+
+        <section>
+            <h2>mis libros</h2>
+            <div>
+
+            </div>
+
+
+
+        </section>
+    </main>
+
+
+
+    <footer>
+        <small>Hecho por Leonardo Chavez</small>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
